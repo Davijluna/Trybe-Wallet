@@ -6,7 +6,10 @@ class Login extends React.Component {
       <div>
         Login:
         <label htmlFor="name">
-          <input type="email" />
+          <input type="email" data-testid="email-input" />
+
+          <input type="password" data-testid="password-input" />
+
         </label>
       </div>);
   }
