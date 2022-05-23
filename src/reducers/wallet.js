@@ -1,19 +1,20 @@
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
+import { CURRENCE } from '../actions/index';
+
 const INITIAL_STATE = {
   currencies: [],
   expenses: [],
 };
 
-const wallet = (state = INITIAL_STATE, action) => {
+const GlobalWallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  // case NOME_DO_EVENTO:
-  //   return {
-  //     ...state,
-  //     chaveExemplo: action.playload.algumValor,
-  //   };
+  case CURRENCE:
+    return {
+      ...state, currencies: action.payload,
+    };
   default:
     return state;
   }
 };
 
-export default wallet;
+export default GlobalWallet;
