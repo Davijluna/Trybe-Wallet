@@ -15,7 +15,7 @@ class Login extends React.Component {
 
   funcState = ({ target }) => {
     this.setState({
-      [target.name]: target.value,
+      [target.name]: target.value, // atualiza o input de email e senha a cada mudança.
     });
   };
 
@@ -37,8 +37,6 @@ class Login extends React.Component {
   click = () => {
     const { email } = this.state;
     const { salvarEmail, history } = this.props;
-    console.log(typeof history);
-    // console.log(typeof salvarEmail);
     salvarEmail(email);
     history.push('/carteira');
   }
