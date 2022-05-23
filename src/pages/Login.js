@@ -77,7 +77,7 @@ class Login extends React.Component {
   }
 }
 Login.propTypes = {
-  salvarEmail: PropTypes.string.isRequired,
+  salvarEmail: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
